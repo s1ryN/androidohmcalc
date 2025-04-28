@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/napeti"
+        android:layout_width="260dp"
+        android:layout_height="44dp"
+        android:layout_margin="16dp"
+        android:hint="Napětí"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/proud"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/volt" />
+
+    <EditText
+        android:id="@+id/proud"
+        android:layout_width="259dp"
+        android:layout_height="44dp"
+        android:layout_margin="16dp"
+        android:hint="Proud"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/odpor"
+        app:layout_constraintEnd_toEndOf="@+id/odpor"
+        app:layout_constraintHorizontal_bias="0.578"
+        app:layout_constraintStart_toStartOf="@+id/odpor"
+        app:layout_constraintTop_toTopOf="@+id/amper" />
+
+    <EditText
+        android:id="@+id/odpor"
+        android:layout_width="257dp"
+        android:layout_height="44dp"
+        android:layout_margin="16dp"
+        android:hint="Odpor"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="@+id/ohm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ohm" />
+
+    <TextView
+        android:id="@+id/volt"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:text="V"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toEndOf="@+id/napeti"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.361" />
+
+    <TextView
+        android:id="@+id/amper"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/proud"
+        app:layout_constraintTop_toBottomOf="@+id/volt"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/ohm"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:text="Ω"
+        app:layout_constraintBottom_toTopOf="@+id/reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/odpor"
+        app:layout_constraintTop_toBottomOf="@+id/amper"
+        app:layout_constraintVertical_bias="0.528" />
+
+    <Button
+        android:id="@+id/vypocitej"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vypočítej"
+        android:onClick="calculateRest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:onClick="reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toEndOf="@+id/vypocitej"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.644" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
